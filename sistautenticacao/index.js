@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-
 const db = require('./config/db.js')
 const consign = require('consign')
 
@@ -11,7 +10,7 @@ consign()
    .then('./api')
    .then('./config/routes.js')
    .into(app)
-
+   .include('./config/passport.js')
 
 app.db = db
 
