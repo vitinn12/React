@@ -30,6 +30,13 @@ module.exports = app => {
                
         })
     }
+    const listUsuarios = (req, res) => {
+        app.db('usuarios')
+            .orderBy('nome')
+            .then(users => res.json(users))
+            .catch(err => res.status(400).json(err))
+            return {save, listUsuarios}
+     }
 
-    return {save}
+    return {save, listUsuarios}
 }
