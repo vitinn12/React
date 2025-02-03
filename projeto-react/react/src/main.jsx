@@ -19,6 +19,7 @@ const router  = createBrowserRouter([ //Essa biblioteca serve para o usuario cri
     path: "/usuarios",
     element: <Usuarios/>,
   },
+
 ])
 
 createRoot(document.getElementById('root')).render(

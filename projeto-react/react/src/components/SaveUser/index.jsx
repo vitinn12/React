@@ -1,8 +1,14 @@
 import { Button, TextField } from "@mui/material";
 import { useState } from "react";
 import "../../index.css";
+import { useNavigate } from "react-router-dom";
 
 export const SaveUser = ({onAddUser}) => {
+  const navigate = useNavigate()
+  function Home (){
+    navigate ('/')
+  }  
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
@@ -38,6 +44,7 @@ export const SaveUser = ({onAddUser}) => {
             />
           </nav>
           <Button onClick={handleSaveUser} variant="contained">Cadastrar</Button>
+          <Button onClick={Home} variant="contained">Pagina Principal</Button>
         </form>
       </section>
     </>

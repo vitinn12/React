@@ -15,8 +15,8 @@ export const TableUsers = ({list}) => {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell align="right">Nome</TableCell>
-            <TableCell align="right">Email</TableCell>
+            <TableCell align="center">Nome</TableCell>
+            <TableCell align="center">Email</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
