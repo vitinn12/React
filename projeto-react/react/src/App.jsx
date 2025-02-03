@@ -2,10 +2,10 @@ import { SaveUser } from "./components/SaveUser"
 import { TableUser } from "./components/TableUser"
 
 export const App = () => {
-  const [list, setList] = useState ([])
+  const [list, setList] = useState([])
 
   function HandleSaveUser(user) {
-    let Lista = [...List]
+    let Lista = [...list]
     Lista.push(user)
     setList(Lista)
   }
@@ -13,8 +13,6 @@ export const App = () => {
     <>
       <SaveUser onAddUser={HandleSaveUser}/>
       <TableUser List ={List}/>
-
-
     </>
   )
 }
