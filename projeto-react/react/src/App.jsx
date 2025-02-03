@@ -5,18 +5,21 @@ import { TableUser } from "./components/TableUser"
 export const App = () => {
   const [list, setList] = useState([])
 
-  function HandleSaveUser(user) {
+  function handleSaveUser(user) {
     let newList = [...list]
     newList.push(user)
     setList(newList)
   } 
   return (
     <>
-      <SaveUser onAddUser = {HandleSaveUser}/>
+  
+      <SaveUser onAddUser={handleSaveUser}/>
       <TableUser List = {list}/>
     </>
   )
 }
+
+
 
 
 

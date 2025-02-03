@@ -3,14 +3,13 @@ import { useState } from "react";
 import "../../index.css";
 
 export const SaveUser = ({onAddUser}) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
 
   function handleSaveUser() {
     const data = {
-      name,
-      email,
-    };
+      name, email
+    }
     console.log(data);
     onAddUser(data)
   }

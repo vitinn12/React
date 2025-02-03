@@ -10,10 +10,4 @@ createRoot(document.getElementById('root')).render(
 )
 
 
-// createRoot(document.getElementById('cad')).render(
-//   <StrictMode>
-//     <Cad />
-//   </StrictMode>,
-// )
-
 
