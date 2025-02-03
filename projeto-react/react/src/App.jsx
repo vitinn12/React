@@ -1,24 +1,19 @@
-import { useState } from "react"
-import { SaveUser } from "./components/SaveUser"
-import { TableUser } from "./components/TableUser"
+import { useNavigate } from "react-router-dom"
 
-export const App = () => {
-  const [list, setList] = useState([])
+export function App() {
+  const navigate = useNavigate()
+  function onSeeDetailsClick (){
+    navigate ('/cadastrar')
+  }  
 
-  function handleSaveUser(user) {
-    let newList = [...list]
-    newList.push(user)
-    setList(newList)
-  } 
+
   return (
     <>
-  
-      <SaveUser onAddUser={handleSaveUser}/>
-      <TableUser List = {list}/>
+      <h1>Pagina Principal</h1>
+      <a href="" onClick={onSeeDetailsClick}> Cadastrar</a>
     </>
   )
 }
-
 
 
 
