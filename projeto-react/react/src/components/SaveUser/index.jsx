@@ -6,7 +6,7 @@ export const SaveUser = ({onAddUser}) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
-  function Salvar() {
+  function handleSaveUser() {
     const data = {
       name,
       email,
@@ -38,7 +38,7 @@ export const SaveUser = ({onAddUser}) => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </nav>
-          <Button onClick={Salvar} variant="contained">Cadastrar</Button>
+          <Button onClick={handleSaveUser} variant="contained">Cadastrar</Button>
         </form>
       </section>
     </>

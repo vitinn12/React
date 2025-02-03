@@ -6,11 +6,10 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { TableSave } from '../TableSave';
 
+export const TableUser = ({ list }) => {
+  console.log(list);  // Verifique o que está sendo passado para 'list'
 
-
-export const TableUser = () => {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -21,7 +20,12 @@ export const TableUser = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-            <TableSave name={'rodrigo'} email={'rodrigo@gmail.com'} />
+          {Array.isArray(list) && list.map((user, index) => (
+            <TableRow key={index}>
+              <TableCell align="center">{user.name}</TableCell>
+              <TableCell align="center">{user.email}</TableCell>
+            </TableRow>
+          ))}
         </TableBody>
       </Table>
     </TableContainer>
