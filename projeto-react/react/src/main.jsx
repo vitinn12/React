@@ -4,6 +4,7 @@ import './index.css'
 import {App} from './App.jsx'
 import {Cadastrar} from './pages/Cadastrar.jsx'
 import { BrowserRouter, Routes, Route, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Usuarios } from './pages/Usuarios.jsx'
 
 const router  = createBrowserRouter([ //Essa biblioteca serve para o usuario criar rotas dentro do react
   {
@@ -11,9 +12,13 @@ const router  = createBrowserRouter([ //Essa biblioteca serve para o usuario cri
     element: <App/>,
   },
   {
-    path: "/Cadastrar",
+    path: "/cadastrar",
     element: <Cadastrar/>, 
-  }
+  },
+  {
+    path: "/usuarios",
+    element: <Usuarios/>,
+  },
 ])
 
 createRoot(document.getElementById('root')).render(

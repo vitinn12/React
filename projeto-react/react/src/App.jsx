@@ -2,15 +2,23 @@ import { useNavigate } from "react-router-dom"
 
 export function App() {
   const navigate = useNavigate()
-  function onSeeDetailsClick (){
+  function Cadastrar (){
     navigate ('/cadastrar')
+  }  
+  function Usuarios (){
+    navigate ('/usuarios')
   }  
 
 
   return (
     <>
       <h1>Pagina Principal</h1>
-      <a href="" onClick={onSeeDetailsClick}> Cadastrar</a>
+      <div className="links">
+        <a class="cadastrar" onClick={Cadastrar}> Cadastrar</a>
+        <a class="cadastrar" onClick={Usuarios}> Usuarios Cadastrados</a>
+      </div>
+
+
     </>
   )
 }
