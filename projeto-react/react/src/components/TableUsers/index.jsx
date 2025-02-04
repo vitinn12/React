@@ -1,4 +1,4 @@
-// TableUsers.jsx
+
 import React from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -10,7 +10,7 @@ import Paper from "@mui/material/Paper";
 import { TableUser } from "../TableUser";
 
 export const TableUsers = ({ list }) => {
-  // Verificar se a list é válida antes de acessar o length
+
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
