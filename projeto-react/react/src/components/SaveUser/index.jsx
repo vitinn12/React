@@ -1,26 +1,20 @@
 
-import { Button, TextField } from "@mui/material";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { Button, TextField } from "@mui/material";
+// import { useState } from "react";
+// import { useNavigate } from "react-router-dom";
 
-export const SaveUser = ({ onAddUser }) => {
-  const navigate = useNavigate();
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+export const SaveUser = () => {
+  // const navigate = useNavigate();
 
-  function handleSaveUser() {
-    const data = { name, email };
-    onAddUser(data); 
-    navigate('/'); 
-  }
-  function Home(){
-    navigate ('/');
-  }
+  // function Home(){
+  //   navigate ('/');
+  // }
 
   return (
     <section>
-      <form action="">
-        <h1>Cadastrar Usuário</h1>
+        <form action="http://localhost:3000/signup" method="post">
+
+        {/* <h1>Cadastrar Usuário</h1>
         <nav>
           <TextField
             label="Nome"
@@ -34,10 +28,30 @@ export const SaveUser = ({ onAddUser }) => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-        </nav>
-        <Button onClick={handleSaveUser} variant="contained">Cadastrar</Button>
-        <Button onClick={Home} variant="contained">Menu Principal</Button>
-      </form>
+        </nav> */}
+
+            <div>
+                Nome: <input type="text" name="nome"/>
+
+            </div>
+            
+            <div>
+                CPF: <input type="text" name="cpf"/>
+
+            </div>
+            <div>
+                Telefone: <input type="text" name="telefone"/>
+            </div>
+            <div>
+                E-mail: <input type="email" name="email"/>
+            </div>
+            <div>
+                Senha: <input type="password" name="senha"/>
+            </div>
+            <div>
+                <input type="submit" value="Enviar"/>
+            </div>
+        </form>
     </section>
   );
 };
