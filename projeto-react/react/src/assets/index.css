@@ -12,7 +12,8 @@ section {
 section form {
   background-color: white;
   width: 500px;
-  height: 400px;
+  height: auto;
+  padding: 50px;
   border-radius: 10px;
   gap: 10px;
   flex-direction: column;
@@ -31,7 +32,11 @@ section form nav {
   gap: 10px;
 }
 button {
+  width: 50%;
+  height: 50px;
   background-color: #1a1a1a;
+  color: white;
+  cursor: pointer;
 }
 .cadastrar {
   display: grid;

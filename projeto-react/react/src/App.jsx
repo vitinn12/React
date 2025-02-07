@@ -7,6 +7,9 @@ export function App() {
   function Cadastrar (){
     navigate ('/cadastrar')
   }  
+  function Login (){
+    navigate ('/login')
+  }
   function Usuarios (){
     navigate ('/usuarios')
   }  
@@ -15,9 +18,10 @@ export function App() {
   return (
     <main>
       <h1>Pagina Principal</h1>
-
+      
       <div className="links">
-        <a class="cadastrar" onClick={Cadastrar}> Cadastrar Usuario</a>
+        <a class="cadastrar" onClick={Cadastrar}> Cadastrar</a>
+        <a class="cadastrar" onClick={Login}> Login</a>
         <a class="cadastrar" onClick={Usuarios}> Usuarios Cadastrados</a>
       </div>
 
