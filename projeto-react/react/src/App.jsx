@@ -21,7 +21,7 @@ export function App() {
       
       <div className="links">
         <a class="cadastrar" onClick={Cadastrar}> Cadastrar</a>
-        <a class="cadastrar" onClick={Login}> Login</a>
+        <a class="cadastrar" onClick={Login}>Login</a>
         <a class="cadastrar" onClick={Usuarios}> Usuarios Cadastrados</a>
       </div>
 

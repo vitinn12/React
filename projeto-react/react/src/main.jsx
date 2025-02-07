@@ -3,8 +3,9 @@ import { createRoot } from 'react-dom/client'
 import './assets/index.css'
 import {App} from './App.jsx'
 import {Cadastrar} from './pages/Cadastrar.jsx'
-import { BrowserRouter, Routes, Route, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Usuarios } from './pages/Usuarios.jsx'
+import {Login} from './pages/Login.jsx'
+import { BrowserRouter, Routes, Route, RouterProvider, createBrowserRouter } from "react-router-dom";
 
 const router  = createBrowserRouter([ //Essa biblioteca serve para o usuario criar rotas dentro do react
   {
@@ -18,6 +19,10 @@ const router  = createBrowserRouter([ //Essa biblioteca serve para o usuario cri
   {
     path: "/usuarios",
     element: <Usuarios/>,
+  },
+  {
+    path: "/login",
+    element: <Login/>,
   },
 
 ])

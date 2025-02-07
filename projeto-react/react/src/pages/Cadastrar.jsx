@@ -11,69 +11,73 @@ export const Cadastrar = () => {
   const [password, setSenha] = useState('');
 
   const navigate = useNavigate();
+  function Home() {
+    navigate('/');
+  }
 
-const handleSubmit = async (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     const userData = {
-        nome,
-        cpf,
-        telefone,
-        email,
-        password
+      nome,
+      cpf,
+      telefone,
+      email,
+      password
     };
 
 
-    const response = await fetch('http://localhost:5000/signup', { 
+    const response = await fetch('http://localhost:5000/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(userData), 
+      body: JSON.stringify(userData),
     });
 
     const data = await response.json();
     alert(data.message);
-    navigate ('/')
+    navigate('/')
 
   };
 
   return (
     <section>
       <form onSubmit={handleSubmit}>
-      <h1>Cadastrar Usuário</h1>
+        <h1>Cadastrar Usuário</h1>
 
         <nav>
           <TextField
-            label="nome"
+            label="Nome"
             variant="outlined"
             value={nome}
             onChange={(e) => setNome(e.target.value)}
             required
           />
           <TextField
-            label="email"
+            label="Email"
             variant="outlined"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
           <TextField
-            label="cpf"
+            label= "CPF"
             variant="outlined"
             value={cpf}
             onChange={(e) => setCpf(e.target.value)}
             required
           />
           <TextField
-            label="telefone"
+            label="Telefone"
             variant="outlined"
             value={telefone}
             onChange={(e) => setTelefone(e.target.value)}
             required
           />
           <TextField
-            label="password"
+            label="Password"
+            type="password"
             variant="outlined"
             value={password}
             onChange={(e) => setSenha(e.target.value)}
@@ -82,7 +86,8 @@ const handleSubmit = async (event) => {
 
 
         </nav>
-        <button type="submit">Enviar</button>
+          <button type="submit">Enviar</button>
+          <button onClick={Home} >Menu</button>
       </form>
     </section>
   );
