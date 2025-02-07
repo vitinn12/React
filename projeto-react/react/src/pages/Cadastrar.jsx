@@ -15,7 +15,7 @@ export const Cadastrar = () => {
     navigate('/');
   }
 
-  const requisicao = async (event) => {
+  const requisicaoCadastro = async (event) => {
     event.preventDefault();
 
     const userData = {
@@ -43,7 +43,7 @@ export const Cadastrar = () => {
 
   return (
     <section>
-      <form onSubmit={requisicao}>
+      <form onSubmit={requisicaoCadastro}>
         <h1>Cadastrar Usuário</h1>
 
         <nav>

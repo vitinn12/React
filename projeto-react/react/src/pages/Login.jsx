@@ -11,7 +11,7 @@ export const Login = () => {
     navigate('/');
   }
 
-  const handleLogin = async (event) => {
+  const requisicaoLogin = async (event) => {
     event.preventDefault();
 
     try {
@@ -44,7 +44,7 @@ export const Login = () => {
   return (
     <section>
       <h2>Login</h2>
-      <form onSubmit={handleLogin}>
+      <form onSubmit={requisicaoLogin}>
         <TextField
           label="Email"
           variant="outlined"
