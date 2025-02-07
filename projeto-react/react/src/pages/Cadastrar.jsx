@@ -15,7 +15,7 @@ export const Cadastrar = () => {
     navigate('/');
   }
 
-  const handleSubmit = async (event) => {
+  const requisicao = async (event) => {
     event.preventDefault();
 
     const userData = {
@@ -43,7 +43,7 @@ export const Cadastrar = () => {
 
   return (
     <section>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={requisicao}>
         <h1>Cadastrar Usuário</h1>
 
         <nav>
@@ -86,7 +86,7 @@ export const Cadastrar = () => {
 
 
         </nav>
-          <button type="submit">Enviar</button>
+          <button type="submit">Cadastrar</button>
           <button onClick={Home} >Menu</button>
       </form>
     </section>
