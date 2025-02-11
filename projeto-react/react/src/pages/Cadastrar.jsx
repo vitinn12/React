@@ -86,8 +86,8 @@ export const Cadastrar = () => {
 
 
         </nav>
-          <button type="submit">Cadastrar</button>
-          <button onClick={Home} >Menu</button>
+          <Button variant="contained" fullWidth type="submit">Cadastrar</Button>
+          <Button variant="contained" fullWidth onClick={Home} >Menu</Button>
       </form>
     </section>
   );

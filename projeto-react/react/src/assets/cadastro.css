@@ -1,9 +1,0 @@
-.btn {
-    display: flex;
-    gap: 20px;
-    background-color: aqua;
-    width: 100%;
-}
-.btn button {
-    width: 50%;
-}
